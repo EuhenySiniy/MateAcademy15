@@ -1,4 +1,4 @@
-import dao.DeveloperDao;
+import dao.DeveloperDaoImplementation;
 import entity.Developer;
 import util.HibernateUtil;
 
@@ -14,7 +14,7 @@ public class App {
         developer.setGender("male");
         developer.setSalary(2000.00);
 
-        DeveloperDao developerDao = new DeveloperDao(entityManager);
+        DeveloperDaoImplementation developerDao = new DeveloperDaoImplementation(entityManager);
         developerDao.insertDeveloper(developer);
         HibernateUtil.shutdown();
     }

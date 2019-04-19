@@ -7,6 +7,9 @@ public class HibernateUtil {
     private static final String PERSISTENCE_UTIL_NAME = "PERSISTENCE";
     private static EntityManagerFactory factory;
 
+    private HibernateUtil() {
+    }
+
     public static EntityManagerFactory getEntityManagerFactory() {
         if (factory == null) {
             factory = Persistence.createEntityManagerFactory(PERSISTENCE_UTIL_NAME);
