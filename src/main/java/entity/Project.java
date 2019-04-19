@@ -33,7 +33,7 @@ import java.util.Set;
 public class Project extends Model {
 
     @Column(name = "cost")
-    private Double cost;
+    private int cost;
 
     @Column(name = "date")
     private Date date;
